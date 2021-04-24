@@ -10,6 +10,10 @@
   text-align: center;
 }
 
+body {
+  width: 100%;
+}
+
 header .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,9 +99,9 @@ section .container .cards .content .side {
   border-radius: 10px;
 }
 
-section .container .cards .content .back {
-  -webkit-transform: rotateY("180deg");
-          transform: rotateY("180deg");
+section .container .cards .content .front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 section .container .cards .content .front img {
@@ -109,8 +113,8 @@ section .container .cards .content .front img {
   display: block;
 }
 
-section .container .cards .content .flip {
-  -webkit-transform: rotateY("180deg");
-          transform: rotateY("180deg");
+section .container .cards .content.flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 /*# sourceMappingURL=style.css.map */

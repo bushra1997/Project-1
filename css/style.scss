@@ -13,6 +13,9 @@ $width: (
 .text-center{
     text-align: center;
 }
+body{
+    width: 100%;
+}
 header{
     .container{
         display: flex;
@@ -60,7 +63,7 @@ section{
                 transform-style: preserve-3d;
                 position: relative;
                 cursor: pointer;
-                .side{
+                .side{ 
                     background-color: #fff;
                     position: absolute;
                     width: 100%;
@@ -70,9 +73,10 @@ section{
                     border-radius: 10px;
                 }
                 .back{
-                    transform: rotateY('180deg');                
+                                
                 }
                 .front{
+                    transform: rotateY(180deg);    
                     img{
                         // display: inline;
                         // margin: 50% auto;
@@ -85,8 +89,8 @@ section{
                 }
 
             }
-            .content .flip{
-                transform: rotateY('180deg');
+            .content.flip{
+                transform: rotateY(180deg);
             }
         }
     }
