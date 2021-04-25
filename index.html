@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -29,18 +29,39 @@
         </div>
         <div class="float-left">
           <ul>
-            <li><i class="fas fa-user-astronaut"></i> <p>Username</p></li>
-            <li>Score</li>
+            <li>
+              <i class="fas fa-user-astronaut"></i>
+              <p>Username</p>
+            </li>
+            <li id="Score">Score</li>
           </ul>
         </div>
       </div>
     </header>
 
+    <header style="background-color: transparent">
+      <div class="container" style="padding: 1% 5% 0%">
+        <h3 style="color: #444; padding-top: 1%;">Select the matching cards</h3>
+        <br />
+        <button
+          onclick="timer()"
+          style="
+            border: #b5deff solid 1px;
+            background-color: #b5deff;
+            color: #fff;
+            width: 100px;
+            padding: 0.5% 0%;
+            border-radius: 15px;
+            font-size: 25px;
+            cursor: pointer;
+          "
+        >
+          Play
+        </button>
+      </div>
+    </header>
+
     <section class="text-center">
-      <!-- <div class="container">
-        <h2>select the matching cards</h2>
-        <button class="btn">Play</button>
-      </div> -->
       <!-- 2 rows with 4 cols -->
       <div class="container">
         <!-- make the filpping after the 10 seconds -->
@@ -49,10 +70,10 @@
         <div class="cards">
           <!-- when the user clicks on the card it will flip to show the front side of the card -->
           <div class="content">
-            <div class="front side">
-              <img src="./images/icon10.jpg" alt="">
+            <div class="front side" id="front">
+              <img src="./images/icon10.jpg" alt="" />
             </div>
-            <div class="back side">
+            <div class="back side" id="back">
               <!-- image as a background -->
               <img src="./images/card-background.jpg" alt="" />
             </div>
@@ -60,95 +81,94 @@
         </div>
         <div class="cards">
           <div class="content">
-            <div class="front side">
-              <img src="./images/icon5.jpg" alt="">
+            <div class="front side" id="front">
+              <img src="./images/icon5.jpg" alt="" />
             </div>
-            <div class="back side">
+            <div class="back side" id="back">
               <img src="./images/card-background.jpg" alt="" />
             </div>
           </div>
         </div>
         <div class="cards">
           <div class="content">
-            <div class="front side">
-              <img src="./images/icon9.jpg" alt="">
+            <div class="front side" id="front">
+              <img src="./images/icon9.jpg" alt="" />
             </div>
-            <div class="back side">
+            <div class="back side" id="back">
               <img src="./images/card-background.jpg" alt="" />
             </div>
           </div>
         </div>
         <div class="cards">
           <div class="content">
-            <div class="front side">
-              <img src="./images/icon4.jpg" alt="">
+            <div class="front side" id="front">
+              <img src="./images/icon4.jpg" alt="" />
             </div>
-            <div class="back side">
+            <div class="back side" id="back">
               <img src="./images/card-background.jpg" alt="" />
             </div>
           </div>
         </div>
         <div class="cards">
           <div class="content">
-            <div class="front side">
-              <img src="./images/icon9.jpg" alt="">
+            <div class="front side" id="front">
+              <img src="./images/icon9.jpg" alt="" />
             </div>
-            <div class="back side">
+            <div class="back side" id="back">
               <img src="./images/card-background.jpg" alt="" />
             </div>
           </div>
         </div>
         <div class="cards">
           <div class="content">
-            <div class="front side">
-              <img src="./images/icon4.jpg" alt="">
+            <div class="front side" id="front">
+              <img src="./images/icon4.jpg" alt="" />
             </div>
-            <div class="back side">
+            <div class="back side" id="back">
               <img src="./images/card-background.jpg" alt="" />
             </div>
           </div>
         </div>
         <div class="cards">
           <div class="content">
-            <div class="front side">
-              <img src="./images/icon5.jpg" alt="">
+            <div class="front side" id="front">
+              <img src="./images/icon5.jpg" alt="" />
             </div>
-            <div class="back side">
+            <div class="back side" id="back">
               <img src="./images/card-background.jpg" alt="" />
             </div>
           </div>
         </div>
         <div class="cards">
           <div class="content">
-            <div class="front side">
-              <img src="./images/icon8.jpg" alt="">
+            <div class="front side" id="front">
+              <img src="./images/icon8.jpg" alt="" />
             </div>
-            <div class="back side">
+            <div class="back side" id="back">
               <img src="./images/card-background.jpg" alt="" />
             </div>
           </div>
         </div>
         <div class="cards">
           <div class="content">
-            <div class="front side">
-              <img src="./images/icon10.jpg" alt="">
+            <div class="front side" id="front">
+              <img src="./images/icon10.jpg" alt="" />
             </div>
-            <div class="back side">
+            <div class="back side" id="back">
               <img src="./images/card-background.jpg" alt="" />
             </div>
           </div>
         </div>
         <div class="cards">
           <div class="content">
-            <div class="front side">
-              <img src="./images/icon8.jpg" alt="">
+            <div class="front side" id="front">
+              <img src="./images/icon8.jpg" alt="" />
             </div>
-            <div class="back side">
+            <div class="back side" id="back">
               <img src="./images/card-background.jpg" alt="" />
             </div>
           </div>
         </div>
-        
       </div>
     </section>
 

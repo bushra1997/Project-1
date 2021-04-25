@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   list-style: none;
   line-height: 1.6;
 }
@@ -39,23 +39,24 @@ header .container .float-left ul li p {
   display: inline;
 }
 
-header, footer {
-  background-color: #DAB3F2;
+header,
+footer {
+  background-color: #dab3f2;
   color: #fff;
   width: 100%;
 }
 
-header .container, footer .container {
+header .container,
+footer .container {
   padding: 0.5% 5%;
 }
 
 footer {
   bottom: 0;
-  position: fixed;
 }
 
 section {
-  margin: 2% 0% 5% 0%;
+  margin: 2% 0%;
 }
 
 section .container {
@@ -97,6 +98,10 @@ section .container .cards .content .side {
           backface-visibility: hidden;
   overflow: hidden;
   border-radius: 10px;
+}
+
+section .container .cards .content .back img {
+  width: 100%;
 }
 
 section .container .cards .content .front {
