@@ -10,22 +10,38 @@ const cards = document.querySelectorAll(".content");
 
 let cardFlipped = false;
 let firstCard, secondCard;
+let score = 0;
 function flipCard() {
   this.classList.add("flip");
   if (!cardFlipped) {
     cardFlipped = true;
     firstCard = this;
-    firstCard.removeEventListener("click", flipCard)
-    console.log(cardFlipped, firstCard)
   } else {
     cardFlipped = false;
     secondCard = this;
-    secondCard.removeEventListener("click", flipCard)
-    console.log(cardFlipped, secondCard)
   }
-//   if the cards are match??
-const image = document.querySelectorAll('.front>img');
 
-  
+  if(firstCard.dataset.card === secondCard.dataset.card){
+    firstCard.removeEventListener("click", flipCard);
+    secondCard.removeEventListener("click", flipCard);
+    score = score +10;
+    document.getElementById("score").innerHTML = score;
+    firstCard = null;
+    secondCard = null;
+  }else{
+    setTimeout(() => {
+      firstCard.classList.remove("flip");
+      secondCard.classList.remove("flip");
+      firstCard = null;
+      secondCard = null;
+    }, 1500)
+  }
+// error in shuffling the cards
+  if(score == 50){
+    cards.forEach(card =>{
+      let numberOfOrder = Math.floor(Math.random() * 10);
+      card.style.order = numberOfOrder;
+    })
+  }
 }
 cards.forEach((card) => card.addEventListener("click", flipCard));
